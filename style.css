@@ -1,0 +1,176 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #bb86fc;
+    --secondary-color: #F2EBE3;
+    --card-bg: #1e1e1e;
+    --border-color: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--card-bg);
+    padding: 2rem 1rem; /* Increased padding */
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    margin-bottom: 0.5rem; /* Space below main title */
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Increased gap */
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: #000 !important; /* Ensure text is black for contrast */
+    border: none;
+    padding: 0.8rem 1.8rem; /* Increased padding */
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block; /* Allow padding and margin */
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Softer shadow */
+}
+
+.card h2, .card h3 {
+    margin-top: 0; /* Remove top margin in cards */
+    margin-bottom: 1rem; /* Add space below headings in cards */
+}
+
+.quiz {
+    background-color: var(--bg-color);
+    padding: 1.5rem; /* Increased padding */
+    margin: 1rem 0;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px; /* Rounded corners */
+}
+
+.quiz-question {
+    font-weight: bold;
+    margin-bottom: 1rem; /* Increased margin */
+    color: var(--secondary-color); /* Highlight question */
+}
+
+.quiz-instruction {
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.quiz-option {
+    margin: 0.5rem 0;
+    padding: 0.8rem; /* Increased padding */
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #2a2a2a; /* Slightly lighter background for options */
+    transition: background-color 0.2s ease;
+}
+
+.quiz-option:hover {
+    background-color: #3f3f3f; /* Lighter hover background */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem; /* Space below table */
+}
+
+th, td {
+    padding: 12px; /* Increased padding */
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #333;
+    color: var(--secondary-color); /* Highlight table headers */
+    font-weight: bold;
+}
+
+tr:last-child td {
+    border-bottom: none; /* Remove border from last row */
+}
+
+/* Image Placeholder Styling */
+.image-placeholder {
+    width: 50%;
+    height: 300px; /* Or adjust as needed */
+    background-color: #333; /* Dark gray placeholder */
+    color: #888; /* Light gray text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    margin: 0 auto 1.5rem auto; /* Centers horizontally with space below */
+    border-radius: 8px;
+    object-fit: cover; /* Ensures image covers the area without stretching */
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem; /* Increased padding */
+    background-color: var(--card-bg);
+    margin-top: 3rem; /* Increased margin */
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Slightly smaller gap on mobile */
+    }
+
+    .btn {
+        width: 80%; /* Make buttons take up more width */
+        max-width: 300px; /* Maximum width */
+        text-align: center;
+    }
+
+    .container {
+        padding: 1rem; /* Smaller padding on mobile */
+    }
+}
