@@ -147,14 +147,69 @@ tr:last-child td {
     border-radius: 8px;
     object-fit: cover; /* Ensures image covers the area without stretching */
 }
-
-footer {
-    text-align: center;
-    padding: 1.5rem; /* Increased padding */
+/* Footer Styles */
+.contact-footer {
     background-color: var(--card-bg);
-    margin-top: 3rem; /* Increased margin */
+    padding: 2rem 1rem;
+    text-align: center;
     border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
 }
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-footer h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-icon:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Tooltip styling */
+.social-icon[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.social-icon[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -40px;
+}
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
