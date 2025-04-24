@@ -149,7 +149,7 @@ tr:last-child td {
 }
 /* Footer Styles */
 .contact-footer {
-    background-color: var(--secondary-color);
+    background-color: var(--card-bg);
     padding: 2rem 1rem;
     text-align: center;
     border-top: 1px solid var(--border-color);
@@ -162,7 +162,7 @@ tr:last-child td {
 }
 
 .contact-footer h3 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
